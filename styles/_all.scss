@@ -1,0 +1,89 @@
+@use "header";
+@use "variables";
+@use "fonts";
+@use "button";
+@use "main";
+@use "contents";
+@use "slider";
+@use "download";
+@use "live";
+@use "bonus";
+@use "reasons";
+@use "features";
+@use "platforms";
+@use "info";
+@use "instruction";
+@use "footer";
+
+html, body {
+    font-family: "Poppins";
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    line-height: variables.$h-height;
+    color: variables.$text-black;
+    margin: 0;
+}
+
+h1 {
+    font-size: variables.$h1;
+}
+
+h2 {
+    font-size: variables.$h2;
+}
+
+h3 {
+    font-size: variables.$h3;
+}
+
+h4 {
+    font-size: variables.$h4;
+}
+
+p {
+    line-height: variables.$p-height;
+}
+
+a {
+    text-decoration: none;
+    color: variables.$text-neutral;
+    transition: color 0.3s;
+    
+    &:hover {
+        color: variables.$text-accent;
+    }
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+.text-accent {
+    color: variables.$text-accent;
+}
+
+.text-white {
+    color: variables.$text-white;
+}
+
+.text-black {
+    color: variables.$text-black;
+}
+
+.text-neutral {
+    color: variables.$text-neutral;
+}
+
+.container {
+    width: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        padding: 0;
+        max-width: 100%;
+    }
+}

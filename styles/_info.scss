@@ -1,0 +1,91 @@
+@use "variables";
+
+.info {
+    background-color: variables.$bg-black-20;
+    width: calc(100vw - 64px);
+    position: relative;
+    left: 50%;
+    margin-left: calc(-50vw + 32px);
+    border-radius: 32px;
+
+    &__wrapper {
+        max-width: 1350px;
+        margin: 0 auto;
+        padding: 100px 0;
+
+        h2 {
+            color: variables.$text-white;
+            font-size: 32px;
+
+            @media (max-width: 1024px) {
+                font-size: 28px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+                text-align: center;
+            }
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background-color: variables.$bg-black-50;
+        padding: 64px 52px;
+        border-radius: 32px;
+        margin-top: 32px;
+
+        @media (max-width: 768px) {
+            padding: 12px;
+        }
+    }
+
+    &__tab {
+        color: variables.$text-white;
+        background-color: variables.$bg-black-20;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 34.5px 40px;
+        border-radius: 32px;
+        font-size: 18px;
+        font-family: "Inter";
+        min-width: 250px;
+        max-width: 100%; 
+        overflow-x: auto; 
+        white-space: nowrap; 
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            padding: 28px 32px;
+            font-size: 16px;
+            min-width: 220px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 24px 20px;
+            font-size: 16px;
+            min-width: 200px;
+            gap: 40px;
+        }
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 20px;
+        font-family: "Poppins";
+
+        @media (max-width: 1024px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+}

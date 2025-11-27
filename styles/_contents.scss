@@ -1,0 +1,65 @@
+@use "variables";
+
+.contents {
+    color: variables.$text-neutral;
+
+    &__cards {
+        margin-top: 24px;
+        gap: 20px;
+
+        button {
+            padding: 20.5px 34.5px;
+        }
+
+        & > button { flex-grow: 1; flex-basis: auto; }
+
+        &--desktop {
+            display: flex;
+            flex-wrap: wrap;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .swiper, .swiper-slide {
+            display: none;
+        }
+
+        &--mobile {
+            display: none; 
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 32px;
+
+        .button {
+            padding: 20px 44px;
+            font-size: 16px;
+            min-width: auto;
+            white-space: nowrap; 
+            flex-shrink: 0; 
+        }
+
+        .swiper {
+            display: block;
+        }
+
+        .swiper-slide {
+            display: block;
+        }
+
+        &__cards--desktop {
+            display: none !important; 
+        }
+
+        &__cards--mobile {
+            display: block !important; 
+        }
+    }
+}

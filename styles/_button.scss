@@ -1,0 +1,33 @@
+@use "variables";
+
+.button {
+    border-radius: 100px;
+    padding: 19px 19px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Poppins";
+    cursor: pointer;
+    transition: 0.3s border;
+
+    &.button--accent {
+        color: variables.$text-white;
+        background-color: variables.$bg-accent;
+        border: 1px solid variables.$bg-accent;
+    }
+
+    &.button--light--accent {
+        color: variables.$text-accent;
+        background-color: variables.$bg-light-accent;
+        border: 1px solid variables.$bg-light-accent;
+    }
+
+    &.button--neutral {
+        color: variables.$text-black;
+        background-color: variables.$bg-white-20;
+        border: 1px solid variables.$bg-white-20;
+    }
+
+    &:hover {
+        border: 1px solid #F0251B;
+    }
+}

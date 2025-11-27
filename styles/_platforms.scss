@@ -1,0 +1,45 @@
+.platforms {
+    text-align: left;
+
+    &__container--desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 20px;
+        margin-top: 32px;
+    }
+
+    &__container--mobile {
+        display: none;
+    }
+
+    .swiper {
+        display: none;
+    }
+    
+    @media (max-width: 768px) {
+
+        padding: 0 32px;
+
+        &__container--desktop {
+            display: none;
+        }
+
+        .swiper {
+            display: block;
+        }
+
+        &__container--mobile {
+            display: block;
+
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

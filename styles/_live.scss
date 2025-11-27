@@ -1,0 +1,151 @@
+@use "variables";
+
+.live {
+    @media (max-width: 768px) {
+        padding: 0 32px;
+    }
+    &__name {
+        font-size: 20px;
+        color: variables.$text-black;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__subname {
+        font-size: 14px;
+        font-family: "Inter";
+        color: variables.$text-neutral;
+        margin: 0;
+    } 
+
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .live__controls {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        button {
+            background: rgba(255, 255, 255, 0.1); 
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.2);
+                transform: scale(1.1);
+            }
+
+            img {
+                width: 52px;
+                height: 52px;
+            }
+
+            &:last-child img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    
+    &__cards {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 32px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        background-color: variables.$bg-white-20;
+        padding: 40px 32px;
+        border-radius: 24px;
+        gap: 36px;
+
+        
+        &--review {
+            display: flex;
+            align-items: center;
+            background-color: variables.$bg-white-20;
+            border-radius: 24px;
+            gap: 32px;
+            padding: 12px;
+        }
+    }
+
+    &__review {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        p {
+            font-family: "Inter";
+            color: variables.$text-neutral;
+        }
+    }
+
+    &__versus {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--text {
+            color: variables.$text-accent;
+            font-family: "Inter";
+            font-weight: 900;
+            font-size: 24px;
+            font-style: italic;
+        }
+    }
+
+    &__team {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__stars {
+        display: flex;
+        gap: 8px;
+    }
+}
+
+.live__cards-wrapper {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.live__cards-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.live__card {
+    flex-shrink: 0;
+}
+
+.live__cards {
+    display: flex;
+    gap: 20px;
+}
+
+.live__card--review {
+    min-width: 300px;
+    max-width: 880px;
+    flex-shrink: 0;
+}
