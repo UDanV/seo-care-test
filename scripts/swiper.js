@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (window.innerWidth <= 768) {
         new Swiper(".platforms__container--mobile.swiper", {
-            slidesPerView: 2,
+            slidesPerView: 1,
             grid: {
                 rows: 2,       
                 fill: 'row',
